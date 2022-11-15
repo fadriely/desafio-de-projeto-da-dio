@@ -1,0 +1,2 @@
+Uma das vantagens de Java é, escrever o código uma vez só que irá executar em qualquer plataforma.
+Seu funcionamento é muito simples.
