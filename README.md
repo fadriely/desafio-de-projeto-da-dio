@@ -1,2 +1,3 @@
-# desafio-de-projeto-da-dio
-Repositório criado para o desafio de projeto.
+# organiza-de-estudos
+Repositório criado para organizar e fazer anotações de estudos.
+
