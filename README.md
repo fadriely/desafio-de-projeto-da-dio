@@ -1,3 +1,2 @@
-#organização-de-estudos
-Repositório criado para organizar e fazer anotações de estudos.
-
+# organização-de-estudos.
+repositório criado para organizar e fazer anotações de estudos.
