@@ -1,12 +1,1 @@
-Uma das vantagens de Java é, escrever o código uma vez só que irá executar em qualquer plataforma.
 
-                     Java Fundamentos
-
-funcionalidades essenciais para o primeiro contato com a linguagem;
-  
-  Simplicidade
-
-Uma das vantagens de Java é, escrever o código uma vez só que irá executar em qualquer plataforma.
-Seu funcionamento é muito simples, a simplicidade era o objetivo do designe, pois ele tem que funcionar em dispositivos eletrônicos onde menos memória/recurso estão disponíveis.
-
-  Orientada a objeto
