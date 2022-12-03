@@ -59,7 +59,7 @@ A classe deve possuir o mesmo nome do arquivo.java
 
 * grande parte das classes que serão criadas, serão iniciada com a expressão `public class`e o nome intuitivo da classe. 
 
-* também é possível especificar o modificador de acesso. Por meio dele informamos a visibilidade da classe, que pode ser public, private ou default. 
+* também é possível especificar o **modificador de acesso**. Por meio dele informamos a visibilidade da classe, que pode ser **public, private** ou **default.** 
 
 ## Declaração de variáveis e métodos
 
@@ -101,28 +101,26 @@ ao manipular uma variável altera-se apenas o valor de atribuição
 
 #### Métodos
 
-`TipoRetorno NomeObjetivoNinfinitivo Parametro (s)`
+`TipoRetorno NomeObjetivoNoinfinitivo Parametro (s)`
 
 Ex: `int somar (int numeroUm, int numero2)` dois parâmetros.
 
 * Os métodos na linguagem Java costumam ser aplicados no infinitivo.
 * Todo método tem os seus parâmetros e um método pode receber parâmetros de tipos diferentes.
 
- string primeiroNome = "nome"
+ String primeiroNome = "nome"
 
-string segundoNome = "segundo nome"
+String segundoNome = "segundo nome"
 
 
 
-`string nomeComplet = nomecompleto (primeiroNome, segundoNome)`
+`String nomeComplet = nomecompleto (primeiroNome, segundoNome)`
 
 O valor desta variável é  a chamada de um método que também tem o mesmo nome.
 
+#### Identação 
 
-
-o valor da variável é a chamada de um método que tem o mesmo nome
-
-
+É o espaçamento aplicado no início das linhas de código que ajuda a manter uma hierarquia visual. Na maioria das linguagens esse não é um elemento que impede o código de ser compilado, mas manter o código **indentado** é fundamental para facilitar sua leitura, boas práticas de desenvolvimento.
 
 ## Mapa de atalhos
 
