@@ -53,8 +53,6 @@ O ponto inicial do arquivo, das interações com a linguagem, é comum iniciar o
 
 A classe deve possuir o mesmo nome do arquivo.java
 
-![](C:\Users\ferre\Pictures\Screenshots\Captura de Tela (43).png)
-
 * Todos os arquivos que forem gerados, sempre se iniciará com a letra maiúscula junto com cada palavra complementar (ao criar métodos e variáveis essas regras sofrerão alteração), por padrão todas as classes as primeiras palavras precisarão estar em maiúsculas. 
 
 * grande parte das classes que serão criadas, serão iniciada com a expressão `public class`e o nome intuitivo da classe. 
