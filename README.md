@@ -1,3 +1,2 @@
-#organização de estudos.💻📚
-
+# Organização de estudos. 💻📚
 repositório criado para organizar e fazer anotações de estudos.
