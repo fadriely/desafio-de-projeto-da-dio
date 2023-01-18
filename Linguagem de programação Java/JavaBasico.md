@@ -189,13 +189,47 @@ int modulo = 18 % 3;
 double resultado = (10 * 7) + (20/4);
 ```
 
-O operador de adição quando utilizado em variáveis do tipo texto, realizará a concatenação de textos. Ele faz a junção quando se tem palavras que precisam ser acopladas em um único resultado.
+O operador de adição quando utilizado em variáveis do tipo texto, realizará a concatenação de textos. Ele faz a junção quando se tem palavras que precisam ser acopladas em um único resultado. Um único operador utilizando numa única expressão, pode ser mudado, manipulado os valores de uma variável correspondente
 
 Exemplo: 
 
 ```java
 String nomeCompleto = "LINGUAGEM" + "JAVA";
 ```
+
+#### Unários
+
+Eles realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.
+
+**(++) operador unário de incremento de valor** incrementa o valor em 1 unidade;
+
+**(- -) operador unário de decremento de valor** decrementa o valor em 1 unidade;
+
+**(!) operador unário de negação** nega o valor de uma expressão booleana. Ex: 
+
+```java
+public class operadores {
+    public static void main(String[] args){
+        boolean variavel = true;
+        
+        variavel = !variavel;
+        
+        System.out.println(variavel);
+    }
+}
+```
+
+#### Ternário
+
+É uma forma resumida para definir uma condição e escolher por um dentre dois valores. Deve-se pensar numa condição ternária como se fosse uma condição IF normal, porém, de uma forma em que toda sua estrutura estará escrita em uma única linha.
+
+O operador ternário é representado pelos símbolos **?:**
+
+```java
+<Expressão Condicional> ? <Caso condição seja true> : <Caso condição seja false>
+```
+
+
 
 ## Mapa de atalhos
 
@@ -206,9 +240,6 @@ A classe precisa ter um método principal, denominamos esse método de Main que 
 | Sout: comando de impressão na linguagem Java. |       System.out.println("hello  world");       |
 | ctrl+shift+P                                  |                criar um projeto                 |
 | ctrl+k                                        |              abre a tela de commit              |
-
-
-
 
 
 
