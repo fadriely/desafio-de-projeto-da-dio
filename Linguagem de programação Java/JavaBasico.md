@@ -95,7 +95,7 @@ ao manipular uma variável altera-se apenas o valor de atribuição
 ```java
 TipoRetorno NomeObjetivoNoinfinitivo Parametro (s)
 
-Ex: int somar (int numeroUm, int numero2) dois parâmetros.
+Ex: int somar (int numeroUm, int numeroDois) dois parâmetros.
 ```
 
 * Os métodos na linguagem Java costumam ser aplicados no infinitivo.
@@ -108,7 +108,7 @@ String segundoNome = "segundo nome"
 
 
 ```java
-String nomeComplet = nomecompleto (primeiroNome, segundoNome)
+String nomeCompleto = nomecompleto (primeiroNome, segundoNome)
 ```
 
 O valor desta variável é  a chamada de um método que também tem o mesmo nome.
@@ -225,8 +225,63 @@ public class operadores {
 
 O operador ternário é representado pelos símbolos **?:**
 
+`<Expressão Condicional> ? <Caso condição seja true> : <Caso condição seja false>`
+
+#### Lógico 
+
+Permite criar expressões lógicas maiores e partir da junção de duas ou mais expressões.
+
+tem-se condições, e precisa-se avaliar se  a primeira e a segunda condição é verdadeira ou a primeira ou a segunda é verdadeira.
+
+* `&&` Operador lógico "E"
+* `||` Operador lógico "OU"
+
+Essas duas condições podem ser uma variável booleana ou pode ser uma expressão usando os operadores relacionais. 
+
+#### Relacionais
+
+Avaliam a relação entre duas variáveis ou expressões. Neste caso, mais precisamente, definem se o operando á esquerda é `igual`, `diferente`, `menor`, `menor ou igual, maior ou igual` ao da direita, retornando um valor booleano como resultado.
+
+* == Quando desejamos verificar se uma variável é IGUAL  a outra.
+* ! = Quando desejamos verificar se uma variável é DIFERENTE da outra.
+* `>` Quando desejamos verificar se uma variável é MAIOR QUE  a outra.
+* `>=` MAIOR OU IGUAL a outra.
+* `<` MENOR QUE a outra.
+* `<=` MENOR OU IGUAL a outra.
+
+## Métodos
+
+Uma classe é definida por atributos e métodos. Atributos são em sua grande maioria, variáveis de diferentes tipos e valores relacionada a concepção da estrutura ou informações de uma determinada classe. Os métodos em sua vez, correspondem a **funções** ou **sub-rotinas** disponíveis dentro das classes.
+
+#### Critério de nomeação de métodos
+
+* Deve ser nomeado como verbo. ex: acelerar, frear, processar, concluir...
+* Seguir o padrão camelCase (Todas as letras minúsculas com a exceção da primeira letra da segunda palavra)
+
+#### Critério de definição de métodos
+
+1. **Qual a proposta principal do método?** deve-se criar métodos com uma objetividade em especial. se perguntar constantemente até compreender a real finalidade do mesmo.
+2. **Qual o tipo de retorno esperado após executar o método?** deve-se analisar se o método será responsável por retornar algum valor ou não (qual o tipo de retorno esperado após executar o método). 
+
+caso o método não retornar nenhum valor, ele será representado pela palavra-chave void. 
+
+	3. **Quais os parâmetros serão necessários para a execução do método?** Os métodos as vezes precisam de argumentos como critérios para a execução. Ex: para realizar uma soma, tem-se no mínimo dois parâmetros numéricos.
+	3. **O método possui o risco de apresentar alguma exceção?** Exceções são comuns na execução de métodos, as vezes é necessário prever e tratar a possível existência  de uma exceção. Exceções são comuns na execução de métodos, são comportamentos inesperados.
+	3. **Qual a visibilidade do método?** Será necessário que o método seja visível a toda aplicação, somente em mesmo pacotes, através de herança ou somente a nível a própria classe
+
+estrutura do método:
+
 ```java
-<Expressão Condicional> ? <Caso condição seja true> : <Caso condição seja false>
+	public double somar(int num1, int num2){
+    
+    	//logica - finalidade do método
+        return...;
+}
+	public void imprimir(string texto){
+        //logica - finalidade do método
+        //não precisa do return
+        //pois não será retornado nenhum resultado
+    }
 ```
 
 
@@ -240,7 +295,6 @@ A classe precisa ter um método principal, denominamos esse método de Main que 
 | Sout: comando de impressão na linguagem Java. |       System.out.println("hello  world");       |
 | ctrl+shift+P                                  |                criar um projeto                 |
 | ctrl+k                                        |              abre a tela de commit              |
-
 
 
 
