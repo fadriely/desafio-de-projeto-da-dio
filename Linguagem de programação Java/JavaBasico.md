@@ -265,11 +265,23 @@ Uma classe é definida por atributos e métodos. Atributos são em sua grande ma
 
 caso o método não retornar nenhum valor, ele será representado pela palavra-chave void. 
 
-	3. **Quais os parâmetros serão necessários para a execução do método?** Os métodos as vezes precisam de argumentos como critérios para a execução. Ex: para realizar uma soma, tem-se no mínimo dois parâmetros numéricos.
-	3. **O método possui o risco de apresentar alguma exceção?** Exceções são comuns na execução de métodos, as vezes é necessário prever e tratar a possível existência  de uma exceção. Exceções são comuns na execução de métodos, são comportamentos inesperados.
-	3. **Qual a visibilidade do método?** Será necessário que o método seja visível a toda aplicação, somente em mesmo pacotes, através de herança ou somente a nível a própria classe
+3. **Quais os parâmetros serão necessários para a execução do método?** Os métodos as vezes precisam de argumentos como critérios para a execução. Ex: para realizar uma soma, tem-se no mínimo dois parâmetros numéricos.
+3. **O método possui o risco de apresentar alguma exceção?** Exceções são comuns na execução de métodos, as vezes é necessário prever e tratar a possível existência  de uma exceção. Exceções são comuns na execução de métodos, são comportamentos inesperados.
+3. **Qual a visibilidade do método?** Será necessário que o método seja visível a toda aplicação, somente em mesmo pacotes, através de herança ou somente a nível a própria classe
 
 estrutura do método:
+
+<qual. de acesso> < tipo de retorno > < nome > (parâmetros)
+
+{
+
+​		< bloco de comandos; >
+
+}
+
+* qual. de acesso: este é o **qualificador de acesso**, que pode ser  public, private, package ou protected. Estes qualificadores definem limites de acesso aos elementos da classe.
+* Tipo de retorno: define o tipo de retorno do método e pode ser do tipo Void, string, int, double etc.
+* nome: nome do método 
 
 ```java
 	public double somar(int num1, int num2){
@@ -283,6 +295,158 @@ estrutura do método:
         //pois não será retornado nenhum resultado
     }
 ```
+
+## Escopo
+
+O ambiente onde uma variável pode ser acessada. Em Java, o escopo de variáveis **vai de acordo com o bloco onde ela foi declarada.** (deve-se ter a compreensão de onde declaramos as variáveis, algoritmos, fluxos para se ter uma noção de visibilidade de acesso e de fronteiras das implementações).
+
+A variável é declarada no primeiro acesso á ela, se tornando inacessível após o interpretador sair do bloco de execução ao qual ela pertence. portanto, esta variável não pode ser lida ou manipulada por rotinas e códigos que estão fora do seu bloco de declaração.
+
+*onde se declara a variável ela tem uma diferenciação de visibilidade. 
+
+Caso se declare uma variável DENTRO DE UM MÉTODO, o escopo dessa variável está limitado apenas ao corpo desse método, ou seja, dentro das chaves que limitam o método.
+
+```java
+piblic class Conta {
+    	//variavel de classe conta
+    	double saldo=10.0;
+    	public void sacar(Double valor){
+            //variavel local de método
+            double novoSaldo = saldo - valor;
+        }
+    	pulic void imprimirSaldo(){
+            //disponível em toda classe
+            System.out,println(saldo);
+            //somente o método sacar conhece esta variável
+            System.out,println(novoSaldo);
+        }
+    public double calcularDerivadaExponencial(){
+        	//variável local de método
+        	double valorParcela = 50.0;
+        	double valorMontante = 0.0;
+        	for(Int X=1; X<=5; X++) {//X variável de escopo de 
+            	//esta variável será reiniciada a cada exemplo
+                double valorCalculado = valorParcela * x;
+                valorMontante = valormontante + valorCalculado
+            }
+        	//escopo de fluxo
+        	//x e valorCalculado nunca estarão disponíveis fora do bloco
+        
+        	return valorMontante;
+        	
+    }
+}
+```
+
+## Palavras reservadas
+
+São identificadores de uma linguagem que já possuem uma finalidade específica, portanto não podem ser utilizados para nomear variáveis, classes, métodos ou atributos.
+
+*Todas essas palavras são classificadas em grupos e escritas com letras minúsculas.
+
+*****
+
+**Controle de pacotes**
+
+**import:** importa pacotes ou classes para dentro do código
+
+**Package:** especifica a que pacote todas as classes de um arquivo pertencem
+
+****
+
+**Modificador de acesso** 
+
+**public:** acesso de qualquer classe
+
+**private:** acesso apenas dentro da classe
+
+**protected:** acesso por classe no mesmo pacote e subclasses *tem a finalidade de ser trabalhada com herança, só usa o protected quando tiver a concepção de uso de herança na linguagem.
+
+****
+
+**Tipos primitivos**
+
+**boolean:** um valor indicando verdadeiro ou falso 
+
+**byte:** um intervalo de 8 bits (signed)
+
+**char:** um character unicode   (16-bit unsigned)
+
+**double:** um número de ponto flutuante de 64 bits (signed)
+
+**int:** um inteiro de 32 bits (signed)
+
+**long:** um inteiro de 64 bits (signed)
+
+**short:** um inteiro de 32 bits  (signed)
+
+**void:** indica que o método não tem retorno **de valor** 
+
+****
+
+**Modificadores de classes, variáveis ou métodos**
+
+**abstract:** classe que não pode ser instanciada ou método que precisa ser implementado por uma subclasse não abstrata
+
+**class:** especifica uma classe
+
+**extends: **indica a superclasse que a subclasse está estendendo 
+
+**final:** impossibilita que uma classe seja estendida, que um método seja sobrescrito ou que uma variável seja reiniciada
+
+**implements: **indica as interfaces que uma classe irá implementar
+
+**interface:** especifica uma interface
+
+**native:** indica que um método está escrito em uma linguagem dependente de plataforma, como o C
+
+**new:** instancia um novo objeto, chamado seu construtor 
+
+**static:** faz um método ou variável pertencer á classe ao invés de ás instâncias 
+
+**strictfp:** usado em frente a um método ou classe para indicar que os números de ponto flutuante seguirão as regras de ponto flutuante em todas as expressões  
+
+**synchronized:** indica que um método só pode ser acessado por uma thread de cada vez
+
+**transient**: impede a serialização de campos
+
+**volatile:** indica que uma variável pode ser alterada durante o uso de threads
+
+*exercitar a classificação das palavras reservadas 
+
+****
+
+**Controle de fluxo dentro de um bloco de código**
+
+**break:** sai do bloco de código em que ele está
+
+**case:** executa um bloco de código dependendo do teste do switch 
+
+**continue:** pula a execução do código que virá após essa linha e vai para a próxima passagem do loop
+
+****
+
+**Tratamento de erros**
+
+**assert:** testa uma expressão condicional para verificar uma suposição do programador
+
+**catch:** declara o bloco de código usado para tratar uma execução
+
+**finally:** bloco de código, após um try-catch, que é executado independentemente do fluxo de programa seguido ao lidar com uma exceção
+
+**throw:** usado para passar uma exceção para o método que o chamou
+
+**throws:** indica que um método pode passar uma exceção para o método que o chamou 
+
+**try:** bloco de código que tentará ser executado, mas que pode causar uma exceção 
+
+****
+
+**Variáveis de referência**
+
+**super:** refere-se a superclasse imediata 
+
+**this:** refere-se a instância atual do objeto
 
 
 
