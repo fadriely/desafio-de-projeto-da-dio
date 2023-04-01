@@ -43,6 +43,8 @@ uma das vantagens do intellij é que ele salva automaticamente a cada alteraçã
 
 Uma **classe** é um elemento do código Java que utilizamos para representar objetos do mundo real. Dentro dela é comum declararmos atributos e métodos, que representam, respectivamente, as características e comportamentos desse objeto.
 
+Existem dois tipos de classes: as executáveis e as não executáveis. A diferença entre uma classe executável e outra não executável esta no método chamado *main ()* , e ele conterá as instruções de execução do sistema. Podemos dizer que um sistema em java possui pelo menos uma classe executável, pois é nela ou, mais precisamente, em seu método *main()* que a execução do sistema começa.
+
 O ponto inicial do arquivo, das interações com a linguagem, é comum iniciar o projeto criando um **arquivo.java** e esse arquivo tem um padrão que é o nome do arquivo **e esse nome do arquivo tem que está coerente com a expressão que se irá escrever** com o conteúdo que se vai representar, e todo o conteúdo fica entre chaves, definimos os elementos a ela relacionados: atributos, construtores e métodos. 
 
 ```java
@@ -376,7 +378,7 @@ São identificadores de uma linguagem que já possuem uma finalidade específica
 
 **int:** um inteiro de 32 bits (signed)
 
-**long:** um inteiro de 64 bits (signed)
+**long:** um inteiro de 64 bits (signed)  é o mais recomendado para representar um cpf
 
 **short:** um inteiro de 32 bits  (signed)
 
@@ -448,17 +450,66 @@ São identificadores de uma linguagem que já possuem uma finalidade específica
 
 **this:** refere-se a instância atual do objeto
 
+*****
 
+### Execução da aplicação 
+
+Nem sempre executamos nosso programa Java pela IDE, ele pode ser executado via terminal como MS - DOS, git bash, outros terminais para sistemas operacionais ou terminal do VsCode
+
+Com a JVM  devidamente configurada, pode-se criar um executável do programa e disponibilizar o instalador para qualquer sistema operacional. 
+
+*executando pelo terminal: 
+
+1. precisa identificar onde se encontra a classe do projeto
+2. após a localização do projeto use o comando: **cd diretório do projeto**, depois de colar dar enter  
+3. acessar a pasta bin: comando **cd bin**
+4. dar o comando **dir** para ver oq tem na pasta
+5. comando: **java MonhaClasse** (nome da classe sem extensão **.classe**)
+
+## Argumentos 
+
+Quando executamos uma classe que contenha o método main, o mesmo permite que passemos um array [] de argumentos do tipo string. logo podemos após a definição da classe a ser executada informar estes parâmetros, exemplo: 
+
+```java
+1 java MinhaClasse argumentoUm argumentoDois
+```
+
+Exemplo 
+
+```java
+public class AboutMe {
+    public static void main(String[] args) { //[] args array de argumentos tudo o que diz respeito a objetos também se aplica a arrays.
+        //os argumentos começam com indice 0
+        String nome = args [0];
+        String sobrenome = args [1];
+        int idade = Integer.valueOf(args [2]);
+        double altura = Double.valueOf(args[3]);
+        
+        System.out.println("olá, me chamo " + nome + " " + sobrenome);
+        System.out.println("tenho " + idade + " anos ");
+        System.out.println("minha altura é " + altura + " cm ");
+    }
+}
+```
+
+## Scanner
+
+Percebemos que podemos receber dados digitados pelo usuário do nosso sistema, porém tudo precisa estar em uma linha e também é necessário informar os valores nas posições correspondentes. Esta abordagem pode deixar margem de execução com erro do nosso programa. Para isso, com a finalidade de deixar nossas entradas de dados mais seguras agora vamos receber estes dados via **Scanner**.
+
+A classe **Scanner** permite que o usuário tenha uma interação mais assertiva com o nosso programa **AboutMe** para deixar mais intuitivo aos usuários.
+
+ 
 
 ## Mapa de atalhos
 
 A classe precisa ter um método principal, denominamos esse método de Main que irá ter uma característica única na sua representação de inicialização, com isso, ele precisa seguir um padrão.
 
-| Main, subentende que é o método main.         | main = public static void main(String[] args) { |
-| :-------------------------------------------- | :---------------------------------------------: |
-| Sout: comando de impressão na linguagem Java. |       System.out.println("hello  world");       |
-| ctrl+shift+P                                  |                criar um projeto                 |
-| ctrl+k                                        |              abre a tela de commit              |
+| Main, subentende que é o método main.         |   main = public static void main(String[] args) {   |
+| :-------------------------------------------- | :-------------------------------------------------: |
+| Sout: comando de impressão na linguagem Java. |         System.out.println("hello  world");         |
+| ctrl+shift+P                                  |                  criar um projeto                   |
+| ctrl+k                                        |                abre a tela de commit                |
+| Alt+shift+f10                                 | edit Configuration settings: executar pelo terminal |
+| Alt+R                                         |      program arguments: para por as variáveis       |
 
-
-
+  
